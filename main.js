@@ -253,7 +253,8 @@ const deStructure = {
 //if we wanna access 3 times deStructure.courseInstructor(); it will be very messy in the code and to make it precise aand clean in code we use destructuring =>  its a syntactical sugar 
 
 const {courseInstructor : instructor  , price : RP , courseName:CN} = deStructure; // GOT IT
-console.log(RP);
+// console.log(RP);
+// console.log(CN);
 
 // array ko bh kia jata h destructure 
 
@@ -263,4 +264,12 @@ console.log(RP);
 
 // kabhi kabhi api bh array mai milti hain 
 
-// ------------------------------FUNCTIONS AND PARAMETERS -----------------------------------------
+// ---------------------FUNCTIONS ANDPARAMETERS---------------------
+const myFun = function() {
+  console.log("hello I am function !");
+}
+myFun()  // => execution 
+myFun //Reference bta rhy hain yeh func bus is line mai rehta h 
+// fun ki definition mai jo value hoti h woh parameters hoty hain and jo func call kay time jo value hoti h woh arguments hoty hain 
+
+// acha we have 2 differences here one is kay 
