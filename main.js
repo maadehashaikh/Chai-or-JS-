@@ -253,7 +253,7 @@ const deStructure = {
 //if we wanna access 3 times deStructure.courseInstructor(); it will be very messy in the code and to make it precise aand clean in code we use destructuring =>  its a syntactical sugar 
 
 const {courseInstructor : instructor  , price : RP , courseName:CN} = deStructure; // GOT IT
-// console.log(CN);
+console.log(RP);
 
 // array ko bh kia jata h destructure 
 
