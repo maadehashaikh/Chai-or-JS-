@@ -125,9 +125,9 @@
 // console.log(Array.from({name:"Maadeha"})); // give false bcz jab woh bna nh pata array to [] yehi dayta h 
 // we have to tell it kay value ka array banna h ya key ka 
 
-let score1 = 100;
-let score2 = 200;
-let score3 = 300;
+// let score1 = 100;
+// let score2 = 200;
+// let score3 = 300;
 // console.log(Array.of(score1,score2,score3)); //[ 100, 200, 300 ]
 
 // Master objects and events you'll learn everything in JS 
@@ -154,15 +154,15 @@ let score3 = 300;
 // console.log(user["lastName"]);
 
 // suppose we have a symbol and if hmy is ko as a key add karwana h yeh interview question h 
-const mySym = Symbol("key1");
-const user= {
-  name:"maryam",
-  age:30,
-  isLoggedIn:false,
-  Study:["bachelors","deeni course"],
-  "lastName":"shaikh",
-   [mySym]:"my symbol"
- }
+// const mySym = Symbol("key1");
+// const user= {
+//   name:"maryam",
+//   age:30,
+//   isLoggedIn:false,
+//   Study:["bachelors","deeni course"],
+//   "lastName":"shaikh",
+//    [mySym]:"my symbol"
+//  }
 // console.log(user[mySym]); // giving string type but we want type as symbol 
 // console.log(user); // => result is below due to [] it is showing mySym as Symbol
 // {
@@ -176,9 +176,9 @@ const user= {
 
 // INTERVIEW QUESTIONS 
 // .freeze say we can't do any change 
-user.age = 40;
+// user.age = 40;
 // Object.freeze(user);
-user.age = 67; // 67 execute he nh hua h 
+// user.age = 67; // 67 execute he nh hua h 
 // console.log(user);
 
 // FUNCTION TYPE1 CITIZEN KI TARHN HOTY HAIN 
@@ -195,30 +195,30 @@ user.age = 67; // 67 execute he nh hua h
 // undefined is liyay aa rha  h bcz aik execution khud say hota h we'll see more on it 
 
 // ---------------------------------------------singleton -----------------------------------------------
-const Obj = new Object();
-// console.log(Obj);
+// const Obj = new Object();
+// // console.log(Obj);
 
-const regularUser = {
-  email:"regularuser@gmail.com",
-  fullname:{
-    userfullname : {
-     firstname : "maadeha",
-     lastname:"shaikh"
-    }
-  }
-}
+// const regularUser = {
+//   email:"regularuser@gmail.com",
+//   fullname:{
+//     userfullname : {
+//      firstname : "maadeha",
+//      lastname:"shaikh"
+//     }
+//   }
+// }
 
 // console.log(regularUser.fullname.userfullname.firstname);
 // console.log(regularUser.fullname.userfullname.firstname); this ? is use when api say agar data he nh aa rha ho to its a protection 
 
 
 // COMBINING OBJECTS :
-const obj1 = {1:"a",2:"b"};
-const obj2 = {3:"c",4:"d"};
-const obj3 = Object.assign({},obj1,obj2);
+// const obj1 = {1:"a",2:"b"};
+// const obj2 = {3:"c",4:"d"};
+// const obj3 = Object.assign({},obj1,obj2);
 // console.log(obj3); //OUTPUT => { '1': 'a', '2': 'b', '3': 'c', '4': 'd' } 
 
-const Obj3 = {...obj1 , ...obj2};
+// const Obj3 = {...obj1 , ...obj2};
 // console.log(Obj3);  // OUTPUT => { '1': 'a', '2': 'b', '3': 'c', '4': 'd' } 
 
 
@@ -244,15 +244,15 @@ const Obj3 = {...obj1 , ...obj2};
 // ----------------------------------last video of Objects --------------------------------
 
 // DESTRUCTURING OF ARRAY :
-const deStructure = {
-  courseName : "Js by procoder",
-  price:'6k',
-  courseInstructor:'anurag singh'
-}
+// const deStructure = {
+//   courseName : "Js by procoder",
+//   price:'6k',
+//   courseInstructor:'anurag singh'
+// }
 
 //if we wanna access 3 times deStructure.courseInstructor(); it will be very messy in the code and to make it precise aand clean in code we use destructuring =>  its a syntactical sugar 
 
-const {courseInstructor : instructor  , price : RP , courseName:CN} = deStructure; // GOT IT
+// const {courseInstructor : instructor  , price : RP , courseName:CN} = deStructure; // GOT IT
 // console.log(RP);
 // console.log(CN);
 
@@ -265,11 +265,53 @@ const {courseInstructor : instructor  , price : RP , courseName:CN} = deStructur
 // kabhi kabhi api bh array mai milti hain 
 
 // ---------------------FUNCTIONS ANDPARAMETERS---------------------
-const myFun = function() {
-  console.log("hello I am function !");
-}
-myFun()  // => execution 
-myFun //Reference bta rhy hain yeh func bus is line mai rehta h 
+// const myFun = function() {
+//   // console.log("hello I am function !");
+// }
+// myFun()  // => execution 
+// myFun //Reference bta rhy hain yeh func bus is line mai rehta h 
 // fun ki definition mai jo value hoti h woh parameters hoty hain and jo func call kay time jo value hoti h woh arguments hoty hain 
 
-// acha we have 2 differences here one is kay 
+// acha we have 2 differences here one is kay aik hm return kay andar like result ko rakh rhy hain and aik hm func kay bahar result ko rakh rhy hain 
+
+// function loginUser (username){
+//   return `${username} just logged in !`;
+// }
+// console.log(loginUser()); //undefined just logged in !
+
+// ------------ LECTURE 20 ----------
+//shopping cart example 
+// function calculateCartPrice(...num){
+//   //rest operator when we don't know how many parameters are gonna come as well as ... dots shows the rest parameter as well as spread operator but it depends on their use case that how they are using
+//  return num;
+// }
+// console.log(calculateCartPrice(200,400,500,900)); // jo bh hm yahn p values pass karain gay woh aik array mai add hoty jain ge or yehi main 
+
+// function calculateCartPrice(val1,val2,...num){
+//   return num;
+// }
+// console.log(calculateCartPrice(200,400,500,900)); // [500, 900]
+
+// const User = {
+//   username: 'hitesh',
+//   price:999,
+// }
+
+// function handliObj (anyObj){
+//    console.log(`Username is ${anyObj.username} and price is ${anyObj.price}`);
+// }
+
+// handliObj(User);
+// handliObj({
+//   username:'maadeha',
+//   price:5000
+// })
+
+// const myNewArray = [200,300,400,500];
+// function returnSecValue (getArray){
+//    return getArray[1];
+// } 
+// console.log(returnSecValue(myNewArray));
+
+
+// LECTURE # 21
